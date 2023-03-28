@@ -42,7 +42,6 @@ html, body{
     }
 main{
     position: relative;
-    padding: 15px 0px;
     z-index: 10;
 }
 .flex{
