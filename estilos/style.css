@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root{
+    --font01: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(1, 23, 52);
+    font-family: var(--font01);
+    font-size: 1em;
+}
+    body::before{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(#051937, #abeb12);
+        clip-path: circle(22% at 30% 20%);
+    }
+    body::after{
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient( #1f005c, #ffb56b);
+        clip-path: circle(22% at 80% 70%);
+    }
+main{
+    position: relative;
+    padding: 15px 0px;
+    z-index: 10;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculadora{
+    width: 290px;
+    flex-direction: column;
+    backdrop-filter: blur(100px);
+    padding: 5px;
+    border: 3px solid rgba(147, 3, 147, 0.495);
+    border-radius: 15px;
+}
+.div_nome{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+}
+.nome{
+    color: #597811;
+    font-size: 2.2em;
+    font-variant: small-caps;
+    text-shadow: 2px 2px 0px #ffb56b1e;
+}
+.div_display{
+    width: 100%;
+    margin: 10px 0px;
+}
+.display{
+    width: 90%;
+    background-color:#59781139;
+    backdrop-filter: blur(100px);
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    text-align: right;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.teclas{
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+.tcl{
+    width: 60px;
+    height: 60px;
+    background-color: rgba(137, 43, 226, 0.409);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 2px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px #000e3952;
+}
+.op, .ponto{
+    background-color: #ffb56b88 !important;
+}
+.res{
+    background-color: #597811c1 !important;
+    font-size: 1.5em !important;
+    border-radius: 50% !important;
+}
